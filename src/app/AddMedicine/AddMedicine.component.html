@@ -1,0 +1,58 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Ajouter Médicaments</h4>
+                        
+                    </div>
+                    <div class="card-body">
+                        <form (ngSubmit)="onSubmit()">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Nom"  [(ngModel)]="newMedicament.nom" name="name">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Nom de la pharmacie " type="text" [(ngModel)]="newMedicament.nompharmacie" name="pharmacyName">
+                                  </mat-form-field>
+                                </div>
+                               
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Prix " type="number" [(ngModel)]="newMedicament.prix" name="price">
+                                </mat-form-field>
+                            </div>
+                               
+                                <div class="col-md-6">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Temps de livraison" type="datetime-local" [(ngModel)]="newMedicament.temps_liv" name="deliveryTime">
+                                  </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <mat-form-field class="example-full-width">
+                                    <mat-select placeholder="Catégorie" [(ngModel)]="newMedicament.categorie" name="category">
+                                        <mat-option *ngFor="let categorie of categories" [value]="categorie.id">{{ categorie.nom }}</mat-option>
+                                    </mat-select>
+                                </mat-form-field> 
+                            </div>
+                            </div>
+                            <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="onSubmit()">Ajouter nouveau médicaments</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,61 @@
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Détails sur les commandes</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        #
+                                    </th>
+                                    <th>
+                                        Liste des medicaments
+                                    </th>
+                                    <th>
+                                        Ordonnance
+                                    </th>
+                                    <th>
+                                       Fiche de cnam 
+                                    </th>
+                                    <th>
+                                        Commentaire 
+                                    </th>
+                                    <th>
+                                        Adresse de commande
+                                    </th>
+                                </thead>
+                                <tbody>
+                                   
+                                    <tr *ngFor="let commande of commandes">
+                                      <td>{{ commande.id }}</td>
+                                       <td>{{ commande.reservations.medicament}}</td>
+                                      <td>
+                                        <img src="{{commande.ordonnance}}" alt="Ordonnance" style="width: 100px; height: 100px;">
+                                      </td>
+                                      <td>
+                                        <img src="{{commande.cnam}}" alt="Fiche de cnam" style="width: 100px; height: 100px;">
+                                      </td>
+                                      <td>{{ commande.description}}</td>
+                                      <td>{{ commande.confirmadresse}}</td>
+                                  </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            
+        
+    </div>
+  </div>
+             
+   
+  </div>
+

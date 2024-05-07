@@ -1,0 +1,68 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Liste des commandes Validées</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        #
+                                    </th>
+                                    <th>
+                                        Nom du patient
+                                    </th>
+                                    <th>
+                                        Prénom du patient
+                                    </th>
+                                    <th>
+                                        Etat de commande
+                                    </th>
+                                    <th>
+                                        commande 
+                                    </th>
+                                    <th>
+                                        Livreur 
+                                    </th>
+                                </thead>
+                                <tbody>
+                                   
+                                    <tr *ngFor="let livraison of livraisons">
+                                      <td>{{ livraison.id_livraison }}</td>
+                                      <td>{{ livraison.patientName }}</td>
+                                      <td>{{ livraison.patientFamilyName }}</td>
+                                      <td>{{ livraison.orderStatus }}</td>
+                                      
+                                        <button style="width: 110px; height: 30px;"  class="btn btn-success" >
+                                            <a  href="commande-details/{{livraison.id_livraison}}">
+                                                Détails
+                                            </a>
+                                        </button>
+                                    
+                                
+                                      <td>{{ livraison.livreur }}</td>
+                                      <!-- <td>
+                                          <button style="width: 110px; height: 30px;" type="button" class="btn btn-success" mdbRipple>Détails</button>
+                                          <button style="width: 115px; height: 30px;" type="button" class="btn btn-danger" mdbRipple>Modifier</button>
+                                          <button style="width: 110px; height: 30px;" type="button" class="btn btn-warning" mdbRipple>Active</button>
+                                      </td> -->
+                                  </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            
+        
+    </div>
+  </div>
+             
+   
+  </div>
+
